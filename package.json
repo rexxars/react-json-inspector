@@ -33,7 +33,7 @@
     "watchify": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^15.0.0"
+    "react": "^15 || ^16 || ^17"
   },
   "keywords": [
     "react-component"
