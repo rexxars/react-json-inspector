@@ -1,6 +1,5 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
-var PropTypes = require('prop-types');
 var debounce = require('debounce');
 
 var h = React.createElement;
@@ -13,26 +12,6 @@ var lens = require('./lib/lens');
 var noop = require('./lib/noop');
 
 module.exports = createReactClass({
-    propTypes: {
-        data: PropTypes.any.isRequired,
-        // For now it expects a factory function, not element.
-        search: PropTypes.oneOfType([
-            PropTypes.func,
-            PropTypes.bool
-        ]),
-        searchOptions: PropTypes.shape({
-            debounceTime: PropTypes.number
-        }),
-        onClick: PropTypes.func,
-        validateQuery: PropTypes.func,
-        isExpanded: PropTypes.func,
-        filterOptions: PropTypes.shape({
-            cacheResults: PropTypes.bool,
-            ignoreCase: PropTypes.bool
-        }),
-        query: PropTypes.string,
-        verboseShowOriginal: PropTypes.bool
-    },
     getDefaultProps: function() {
         return {
             data: null,

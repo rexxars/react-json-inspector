@@ -1,5 +1,5 @@
 {
-  "name": "react-json-inspector",
+  "name": "@rexxars/react-json-inspector",
   "version": "7.1.1",
   "description": "React JSON inspector component",
   "main": "json-inspector.js",
@@ -16,9 +16,7 @@
   "dependencies": {
     "create-react-class": "^15.6.0",
     "debounce": "1.0.0",
-    "md5-o-matic": "^0.1.1",
-    "object-assign": "2.0.0",
-    "prop-types": "^15.5.10"
+    "md5-o-matic": "^0.1.1"
   },
   "devDependencies": {
     "browserify": "^6.1.0",
@@ -33,7 +31,7 @@
     "watchify": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^15 || ^16 || ^17"
+    "react": "^15 || ^16 || ^17 || ^18"
   },
   "keywords": [
     "react-component"
