@@ -1,6 +1,9 @@
 import {type ChangeEventHandler, useCallback} from 'react'
 import {noop} from './noop'
 
+/**
+ * @public
+ */
 export interface SearchBarProps {
   onChange: (query: string) => void
   data: unknown

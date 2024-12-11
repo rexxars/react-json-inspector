@@ -19,17 +19,17 @@
   "type": "module",
   "exports": {
     ".": {
-      "source": "./src/JsonInspector.tsx",
-      "import": "./dist/JsonInspector.js",
-      "require": "./dist/JsonInspector.cjs",
-      "default": "./dist/JsonInspector.js"
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
     },
     "./json-inspector.css": "./src/JsonInspector.css",
     "./package.json": "./package.json"
   },
-  "main": "./dist/JsonInspector.cjs",
-  "module": "./dist/JsonInspector.js",
-  "types": "./dist/JsonInspector.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "src"

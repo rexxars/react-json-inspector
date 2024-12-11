@@ -104,7 +104,10 @@ export interface JsonInspectorProps {
   verboseShowOriginal?: boolean
 }
 
-interface InspectorState {
+/**
+ * @public
+ */
+export interface JsonInspectorState {
   query: string
   filterer(
     data: unknown,
@@ -120,7 +123,7 @@ const defaultFilterOptions = {cacheResults: true, ignoreCase: false}
  */
 export class JsonInspector extends Component<
   JsonInspectorProps,
-  InspectorState
+  JsonInspectorState
 > {
   static defaultProps = {
     data: null,
@@ -139,11 +142,11 @@ export class JsonInspector extends Component<
       return query.length >= 2
     },
     /**
-     * Decide whether the leaf node at given `keypath` should be
-     * expanded initially.
-     * @param  {String} keypath
-     * @param  {Any} value
-     * @return {Boolean}
+     * Decide whether the leaf node at given `keypath` should be expanded initially.
+     *
+     * @param keypath - Path to the node
+     * @param value - Value of the node
+     * @returns True if node should be expanded, false otherwise
      */
     isExpanded: function (keypath: string, value: unknown) {
       return false
@@ -238,7 +241,7 @@ export class JsonInspector extends Component<
 
   static getDerivedStateFromProps(
     nextProps: JsonInspectorProps,
-    prevState: InspectorState,
+    prevState: JsonInspectorState,
   ) {
     const filterer = getFilterer(nextProps.data, nextProps.filterOptions)
     return filterer === prevState.filterer ? null : {...prevState, filterer}
@@ -246,7 +249,7 @@ export class JsonInspector extends Component<
 
   shouldComponentUpdate(
     nextProps: JsonInspectorProps,
-    prevState: InspectorState,
+    prevState: JsonInspectorState,
   ) {
     return (
       prevState.query !== this.state.query ||
