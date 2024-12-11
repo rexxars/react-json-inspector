@@ -13,7 +13,6 @@
     "noEmit": true,
     "paths": {
       "@rexxars/react-json-inspector": ["./src/JsonInspector.tsx"]
-    },
-    "types": ["@testing-library/jest-dom"]
+    }
   }
 }
